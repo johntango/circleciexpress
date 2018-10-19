@@ -8,8 +8,6 @@ COPY package.json /usr/src
 RUN npm install
 COPY . /usr/src
 
-ENV NODE_ENV production
-
-EXPOSE 80
+EXPOSE 8080
 CMD ["npm", "start"]
 

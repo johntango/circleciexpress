@@ -6,5 +6,5 @@ app.get('/', function(req, res) {
     res.send('My lucky number =  ' + num);
 });
 
-app.listen(80);
-console.log("Running on port 80");
+app.listen(8080);
+console.log("Running on port 8080");
