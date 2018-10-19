@@ -1,9 +1,9 @@
 version: 2
 jobs:
   build:
-    working_directory: ~/mern-starter
+    working_directory: /usr/src
     docker:
-      - image: expserver
+      - image: circleci/node:4.8.2-jessie
     steps:
       - checkout
       - run:
