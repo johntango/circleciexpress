@@ -11,7 +11,7 @@ jobs:
       - image:circleci/node:10.0.0
     steps:
       - checkout
-      - run: start
+      - run: npm start
 workflows:
   version: 2
   build_and_run:
