@@ -6,3 +6,4 @@ jobs:
     steps:
       - checkout # check out the code in the project directory
       - run: npm install # run the `echo` command
+      - run: npm start
