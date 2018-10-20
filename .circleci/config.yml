@@ -8,10 +8,10 @@ jobs:
       - run: npm install 
       - run: npm start & # run in the background
       - run: npm test &
-      - store_test_results:
-    path: test-results
-persist_to_workspace:
-  root: /tmp/dir
-  paths:
-    - foo/bar
-    - baz
+    store_test_results:
+      path: test-results
+    persist_to_workspace:
+      root: /tmp/dir
+    paths:
+      - foo/bar
+      - baz
