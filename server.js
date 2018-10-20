@@ -1,10 +1,10 @@
 var express = require('express');
-
+var exampleRouter = require("./example-router");
 var app = express();
-app.get('/', function(req, res) {
-    var num = Math.floor(Math.random() * 10);
-    res.send('My lucky number =  ' + num);
-});
+app.use("/example", exampleRouter);
 
+app.get('/', function(req, res) {
+    res.send('Hello World');
+});
 app.listen(8080);
 console.log("Running on port 8080");
