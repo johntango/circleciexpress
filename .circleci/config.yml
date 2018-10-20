@@ -6,6 +6,15 @@ jobs:
     steps:
       - checkout # check out the code in the project directory
       - run: npm install # run the `echo` command
-      - run: npm start
-    ports:
-      - "8080:8080"
+  test:
+    docker:
+      - image:circleci/node:10.0.0
+    steps:
+      - checkout
+      - run: start
+workflows:
+  version: 2
+  build_and_run:
+    jobs:
+      - build
+      - test
