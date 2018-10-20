@@ -7,3 +7,5 @@ jobs:
       - checkout # check out the code in the project directory
       - run: npm install # run the `echo` command
       - run: npm start
+    ports:
+      - "8080:8080"
