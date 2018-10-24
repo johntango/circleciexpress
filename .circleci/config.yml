@@ -8,7 +8,7 @@ jobs:
       - run: npm install 
       - run: npm start & # run in the background
       - run: npm test 
-  deploy:
-    name: digital-ocean
-    command: ssh -o "StrictHostKeyChecking no" root@68.183.27.134 "cd ~/circleciexpress; git pull; npm install; npm start &"
+      - deploy:
+          name: digital-ocean
+          command: ssh -o "StrictHostKeyChecking no" root@68.183.27.134 "cd ~/circleciexpress; git pull; npm install; npm start &"
   
