@@ -6,7 +6,7 @@ jobs:
     steps:
       - checkout # check out the code in the project directory
       - run: npm install 
-      - run: npm start &he docker executor type; machine and macos executors are also supported
+      - run: npm start & 
       - run: npm test 
       - deploy:
           name: digital-ocean
