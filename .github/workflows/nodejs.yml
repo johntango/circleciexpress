@@ -1,8 +1,7 @@
-workflow "Test my code" {
+workflow "Test my code"{
   on = "push"
   resolves = "npm test"
 }
-
 action "npm test" {
   needs = "npm test"
   uses = "docker://node:alpine"
