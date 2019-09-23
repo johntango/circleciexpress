@@ -1,6 +1,6 @@
 workflow "Test my code" {
   on = "push"
-  resolves = ["npm test"]
+  resolves = "npm test"
 }
 
 action "npm test" {
