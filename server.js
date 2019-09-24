@@ -4,8 +4,8 @@ var app = express();
 
 app.use("/example", exampleRouter);
 
-app.get('/', function(req, res) {
-    res.send('Hello World');
+app.get('/', function (req, res) {
+    res.send('Hello World!');
 });
 app.listen(8080);
 console.log("Running on port 8080");
