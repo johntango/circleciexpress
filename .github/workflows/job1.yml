@@ -1,5 +1,5 @@
 
-name: "Run JavaScript Action"
+name: "Run JS Action"
 on:
   push:
     branches:
