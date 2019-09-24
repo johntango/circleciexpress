@@ -1,0 +1,18 @@
+workflow "Test my code"{
+  on = "push"
+  resolves = "npm test"
+  jobs:
+    build-and-publish:
+      name: build and publish
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@master
+        - name: npm install
+          uses: actions/npm@master
+          with:
+            args: install
+        - name: npm test
+          uses: actions/npm@master
+          with:
+            args: run test
+}
