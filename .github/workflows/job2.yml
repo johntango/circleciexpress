@@ -24,7 +24,9 @@ jobs:
     - name: Build Container Image
       run: |
         docker build -t expressimage .
-        docker login jrwtango -p ${secrets.dockerhub}
-        docker push jrwtango\expressimage
+    - name: push to dockerhub
+      uses = "actions/docker/login@master"
+      secrets = ["DOCKER_USERNAME", "DOCKER_PASSWORD"]
+      run: docker push jrwtango\expressimage
       env:
         CI: true
