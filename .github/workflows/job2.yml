@@ -6,8 +6,7 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-
-    strategy:
+    strategy:    # run a matrix strategy
       matrix:
         node-version: [10.x]
 
