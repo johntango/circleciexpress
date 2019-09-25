@@ -28,8 +28,9 @@ jobs:
       env:
         DOCKER_USERNAME: ${{secrets.DOCKER_USERNAME }}
         DOCKER_PASSWORD: ${{secrets.DOCKET_PASSWORD }}
+        CI: true
       uses: actions/docker/login@master
       run: |
         docker push jrwtango/expressimage 
-      env:
-        CI: true
+    
+        
