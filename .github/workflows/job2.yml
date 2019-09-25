@@ -24,13 +24,7 @@ jobs:
     - name: Build Container Image
       run: |
         docker build -t expressimage .
-    - name: setup env
-      env:
-        DOCKER_USERNAME: ${{secrets.DOCKER_USERNAME }}
-        DOCKER_PASSWORD: ${{secrets.DOCKET_PASSWORD }}
-        CI: true
     - name: push to dockerhup
-      uses: actions/docker/login@master
       run: |
         docker push jrwtango/expressimage 
     
