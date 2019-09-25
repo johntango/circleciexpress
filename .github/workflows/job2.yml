@@ -24,7 +24,7 @@ jobs:
         npm test
     - name: Build Container Image
       run: |
-        docker build -t expressImage .
+        docker build -t expressimage .
         docker login jrwtango -p ${secrets.dockerhub}
         docker push jrwtango\expressImage
       env:
