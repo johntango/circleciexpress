@@ -23,7 +23,7 @@ jobs:
         npm test
     - name: Build Container Image
       run: |
-        docker build -t expressimage .
+        docker build -t jrwtango/expressimage .
     - name: push to dockerhup
       run: |
         docker push jrwtango/expressimage 
