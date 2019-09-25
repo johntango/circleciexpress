@@ -26,6 +26,6 @@ jobs:
         docker build -t expressimage .
     - name: push to dockerhub  
       uses: actions/docker/login@master
-      secrets: ["DOCKER_USERNAME", "DOCKER_PASSWORD"]
+      secrets: ${{DOCKER_USERNAME, DOCKER_PASSWORD}}
       env:
         CI: true
