@@ -26,7 +26,6 @@ jobs:
         docker build -t jrwtango/expressimage .
     - name: Docker Login
       uses: actions/docker/login@master
-      secrets: ${dockerhub}
     - name: publish
       uses: actions/action-builder/docker@master
       run: |
