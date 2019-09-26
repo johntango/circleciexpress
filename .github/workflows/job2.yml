@@ -29,7 +29,8 @@ jobs:
       secrets: ${dockerhub}
     - name: publish
       uses: actions/action-builder/docker@master
-      run: docker push jrwtango/expressimage
+      run: |
+        docker push jrwtango/expressimage
   
     
         
