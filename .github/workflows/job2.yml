@@ -26,6 +26,7 @@ jobs:
         docker build -t jrwtango/expressimage .
     - name: push to dockerhup
       run: |
+        docker login jrwtango --username ${DOCKER_USERNAME} --password ${DOCKER_PASSWORD}
         docker push jrwtango/expressimage 
     
         
