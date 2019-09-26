@@ -27,7 +27,6 @@ jobs:
     - name: Docker Login
       uses: actions/docker/login@master
     - name: publish
-      uses: actions/action-builder/docker@master
       run: |
         docker push jrwtango/expressimage
   
