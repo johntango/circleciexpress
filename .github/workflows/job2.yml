@@ -30,6 +30,13 @@ jobs:
         name: jrwtango/expressimage
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
+    - name: cdk synth
+      uses: scottbrenner/aws-cdk-action@master
+      with:
+        args: synth
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
   
     
         
