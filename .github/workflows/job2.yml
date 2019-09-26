@@ -29,7 +29,7 @@ jobs:
       with:
         name: jrwtango/expressimage
         username: ${{ secrets.DOCKER_USERNAME }}
-        password: ${{ secrets.DOCKER_PASSWORD
+        password: ${{ secrets.DOCKER_PASSWORD }}
   
     
         
