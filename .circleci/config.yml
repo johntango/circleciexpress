@@ -10,5 +10,5 @@ jobs:
       - run: npm test 
       - deploy:
           name: digital-ocean
-          command: ssh -o "StrictHostKeyChecking no" root@157.245.142.77 "cd ~/circleciexpress; git pull; npm install; npm start &"
+          command: ssh -o "StrictHostKeyChecking no" root@162.243.171.138 "cd ~/circleciexpress; git pull; npm install; npm start &"
   
