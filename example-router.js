@@ -1,5 +1,5 @@
 function exampleRouteHandler(req, res) {
-  res.send("<p>Hello Earthling! Hello World! Hello M.I.T.! GoodBye Earthling!</p>");
-  res.send("<p>P.S. Major Tom!</p>");
+  res.send("Hello Earthling! Hello World! Hello M.I.T.! GoodBye Earthling!");
+  res.send("P.S. Major Tom!");
 }
 module.exports = exampleRouteHandler;
