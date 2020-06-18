@@ -1,4 +1,4 @@
 function exampleRouteHandler(req, res) {
-  res.send("Goodbye Earthling!");
+  res.send("Hello, this is my third circle CI push testing a branch");
 }
 module.exports = exampleRouteHandler;
