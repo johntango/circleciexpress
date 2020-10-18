@@ -7,7 +7,7 @@ jobs:
       - checkout # check out the code in the project directory -- let's see
       - run: npm install
       - run: npm start &
-      - run: npm node test
+      - run: npm test
      #- deploy:
      #    name: digital-ocean
      #    command: ssh -o "StrictHostKeyChecking no" root@167.71.166.254"cd ~/cicleciexpress; git pull; npm install; npm start  
