@@ -1,0 +1,27 @@
+{
+  "name": "circleciexpress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "mocha test.js --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johntango/circleciexpress.git"
+  },
+  "author": "john <jrw@mit.edu>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/johntango/circleciexpress/issues"
+  },
+  "homepage": "https://github.com/johntango/circleciexpress#readme",
+  "dependencies": {
+    "assert": "^1.4.1",
+    "chai": "^4.2.0",
+    "express": "^4.16.4",
+    "mocha": "^5.2.0",
+    "node-mocks-http": "^1.7.3"
+  }
+}

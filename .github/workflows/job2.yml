@@ -1,0 +1,42 @@
+name: Node CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    strategy:    # run a matrix strategy
+      matrix:
+        node-version: [12.x]
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: npm install, build, and test
+      run: |
+        npm install
+        npm run build --if-present
+        npm test
+    - name: Docker build
+      run: |
+        docker build -t jrwtango/expressimage .
+    - name: expressimage
+      uses: elgohr/Publish-Docker-Github-Action@master
+      with:
+        name: jrwtango/expressimage
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
+    - name: cdk synth
+      uses: scottbrenner/aws-cdk-action@master
+      with:
+        args: synth
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+  
+    
+        
