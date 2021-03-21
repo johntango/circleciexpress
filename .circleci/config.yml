@@ -1,14 +1,8 @@
-version: 2
-jobs:
-  build:
-    docker: #  tircleci/node:10.0.0 # the primary container, where your job's commands are run
-        - image: circleci/node:10.0.0  # run in the background
-    steps:
-      - checkout # check out the code in the project directory
-      - run: npm install 
-      - run: npm start & 
-      - run: npm test 
-      - deploy:
-          name: digital-ocean
-          command: ssh -o "StrictHostKeyChecking no" root@167.71.166.254"cd ~/circleciexpress; git pull; npm install; npm start &"
-  
+version: 2.1
+orbs:
+  node: circleci/node@3.0.0
+workflows:
+  node-tests:
+    jobs:
+      - node/test
+
