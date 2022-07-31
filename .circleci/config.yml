@@ -1,7 +1,10 @@
-version: 2.1 
-orbs:
-node: circleci/node@3.0.0
-workflows:
-node-tests: 
+version: 2 
 jobs:
-- node/test
+  build:
+    docker: # tircleci/node:10.0.0 # the primary container, where your jobs are run
+      - image: circleci/node:10.0.0 #run in the background
+    steps:
+    - checkout #check out the code in the project directory
+    - run: npm install
+    - run: npm start &
+    - run: npm test    
