@@ -25,7 +25,7 @@ jobs:
       run: |
         docker build -t jrwtango/expressimage .
     - name: expressimage
-      uses: elgohr/Publish-Docker-Github-Action@master
+      uses: elgohr/Publish-Docker-Github-Action@v5
       with:
         name: jrwtango/expressimage
         username: ${{ secrets.DOCKER_USERNAME }}
