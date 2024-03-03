@@ -5,7 +5,8 @@ var app = express();
 app.use("/example", exampleRouter);
 
 app.get('/', function (req, res) {
-    res.send('Hello Worlds!');
+    res.send('Hello World! Hello Earthling, Hello Everybody! P.S. Major Tom!');
 });
 app.listen(8080);
-console.log("Running on port 8080");
+console.log("Application Running on port 8080");
+alert("Application Running On Port 8080");
